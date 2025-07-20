@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de IA para Médicos - Revoluciona tu Práctica Médica</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+```
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        overflow-x: hidden;
+    }
+
+    /* Animated gradient background */
+    .hero {
+        background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c);
+        background-size: 400% 400%;
+        animation: gradientShift 15s ease infinite;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        color: white;
+    }
+
+    @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    .hero-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+        text-align: center;
+        z-index: 2;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        animation: fadeInUp 1s ease;
+    }
+
+    .hero .subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+        animation: fadeInUp 1s ease 0.2s both;
+    }
+
+    .cta-button {
+        background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+        color: white;
+        padding: 1rem 2.5rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        animation: fadeInUp 1s ease 0.4s both;
+    }
+
+    .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .section {
+        padding: 5rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .section h2 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 3rem;
+        color: #2c3e50;
+        position: relative;
+    }
+
+    .section h2::after {
+        content: '';
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .benefit-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        border-left: 5px solid #667eea;
+    }
+
+    .benefit-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    }
+
+    .benefit-card h3 {
+        color: #2c3e50;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+    }
+
+    .modules-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+    }
+
+    .module-card {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 2rem;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .module-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255,255,255,0.1);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .module-card:hover::before {
+        opacity: 1;
+    }
+
+    .module-card:hover {
+        transform: scale(1.05);
+    }
+
+    .module-number {
+        font-size: 3rem;
+        font-weight: bold;
+        opacity: 0.3;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .module-card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        z-index: 2;
+        position: relative;
+    }
+
+    .pricing-section {
+        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+        color: white;
+        text-align: center;
+        padding: 5rem 2rem;
+    }
+
+    .pricing-card {
+        background: white;
+        color: #333;
+        max-width: 500px;
+        margin: 3rem auto;
+        padding: 3rem 2rem;
+        border-radius: 20px;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .pricing-card::before {
+        content: 'OFERTA LIMITADA';
+        position: absolute;
+        top: 20px;
+        right: -35px;
+        background: #e74c3c;
+        color: white;
+        padding: 8px 40px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        transform: rotate(45deg);
+    }
+
+    .original-price {
+        text-decoration: line-through;
+        color: #999;
+        font-size: 1.5rem;
+    }
+
+    .current-price {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #27ae60;
+        margin: 1rem 0;
+    }
+
+    .offer-expires {
+        background: #e74c3c;
+        color: white;
+        padding: 1rem;
+        margin: 1rem 0;
+        border-radius: 10px;
+        font-weight: bold;
+    }
+
+    .testimonials {
+        background: #f8f9fa;
+        padding: 5rem 2rem;
+    }
+
+    .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .testimonial {
+        background: white;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        position: relative;
+    }
+
+    .testimonial::before {
+        content: '"';
+        font-size: 4rem;
+        color: #667eea;
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        font-family: Georgia, serif;
+    }
+
+    .testimonial-text {
+        margin: 1rem 0;
+        font-style: italic;
+        line-height: 1.8;
+    }
+
+    .testimonial-author {
+        font-weight: bold;
+        color: #2c3e50;
+        margin-top: 1rem;
+    }
+
+    .speciality {
+        color: #667eea;
+        font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+        .hero h1 {
+            font-size: 2.5rem;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.2rem;
+        }
+        
+        .section {
+            padding: 3rem 1rem;
+        }
+    }
+
+    .pulse {
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+</style>
+```
+
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Revoluciona tu Práctica Médica con Inteligencia Artificial</h1>
+            <p class="subtitle">Domina ChatGPT y las herramientas de IA más avanzadas para transformar tu diagnóstico y tratamiento</p>
+            <a href="https://go.hotmart.com/C100877577W" class="cta-button pulse">¡Inscríbete Ahora!</a>
+        </div>
+    </section>
+
+```
+<!-- Benefits Section -->
+<section class="section">
+    <h2>¿Por qué los Médicos Necesitan IA?</h2>
+    <div class="benefits-grid">
+        <div class="benefit-card">
+            <h3>🎯 Diagnósticos Más Precisos</h3>
+            <p>Utiliza IA para analizar síntomas complejos, reducir errores diagnósticos y considerar diagnósticos diferenciales que podrías pasar por alto.</p>
+        </div>
+        <div class="benefit-card">
+            <h3>⚡ Ahorra Tiempo Valioso</h3>
+            <p>Automatiza tareas administrativas, genera resúmenes de casos clínicos y crea protocolos de tratamiento en minutos, no horas.</p>
+        </div>
+        <div class="benefit-card">
+            <h3>📚 Mantente Actualizado</h3>
+            <p>Accede instantáneamente a la literatura médica más reciente, guidelines actualizadas y evidencia científica relevante.</p>
+        </div>
+        <div class="benefit-card">
+            <h3>🔬 Investigación Avanzada</h3>
+            <p>Acelera tus investigaciones médicas, analiza datos complejos y genera hipótesis innovadoras con herramientas de IA especializadas.</p>
+        </div>
+        <div class="benefit-card">
+            <h3>👨‍⚕️ Mejora la Comunicación</h3>
+            <p>Crea explicaciones claras para pacientes, traduce términos médicos complejos y mejora la adherencia al tratamiento.</p>
+        </div>
+        <div class="benefit-card">
+            <h3>🏥 Optimiza tu Consulta</h3>
+            <p>Prepara consultas más efectivas, documenta casos clínicos detallados y mejora la continuidad del cuidado.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Modules Section -->
+<section class="section">
+    <h2>Contenido del Curso - 4 Módulos Especializados</h2>
+    <div class="modules-container">
+        <div class="module-card">
+            <div class="module-number">01</div>
+            <h3>Introducción a la IA en Medicina</h3>
+            <p>Fundamentos esenciales de la inteligencia artificial aplicada al campo médico. Comprende los conceptos clave, limitaciones éticas y el potencial transformador de la IA en tu práctica diaria.</p>
+        </div>
+        <div class="module-card">
+            <div class="module-number">02</div>
+            <h3>ChatGPT: Herramienta Clave</h3>
+            <p>Domina el uso profesional de ChatGPT para médicos. Aprende técnicas avanzadas de prompting, casos de uso específicos y cómo integrar esta herramienta en tu flujo de trabajo.</p>
+        </div>
+        <div class="module-card">
+            <div class="module-number">03</div>
+            <h3>Práctica Intensiva con IA</h3>
+            <p>Sesiones prácticas con casos clínicos reales. Aplica ChatGPT y otras herramientas de IA en escenarios médicos específicos bajo supervisión experta.</p>
+        </div>
+        <div class="module-card">
+            <div class="module-number">04</div>
+            <h3>Herramientas de IA para Investigación</h3>
+            <p>Descubre herramientas especializadas para investigación médica, análisis de datos clínicos y mejora de la calidad diagnóstica y terapéutica.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+    <div class="section">
+        <h2>Lo que Dicen Nuestros Colegas</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial">
+                <p class="testimonial-text">Este curso cambió completamente mi práctica. Ahora puedo generar diagnósticos diferenciales más completos y mis pacientes reciben un cuidado de mayor calidad. La IA se ha vuelto mi asistente personal más valioso.</p>
+                <div class="testimonial-author">Dr. María Elena Rodríguez</div>
+                <div class="speciality">Medicina Interna, 15 años de experiencia</div>
+            </div>
+            <div class="testimonial">
+                <p class="testimonial-text">Como cardiólogo, las herramientas de IA me ayudan a interpretar estudios complejos y a mantenerme actualizado con las últimas guías de tratamiento. Mis colegas notan la diferencia en mis diagnósticos.</p>
+                <div class="testimonial-author">Dr. Carlos Mendoza</div>
+                <div class="speciality">Cardiología, Hospital Central</div>
+            </div>
+            <div class="testimonial">
+                <p class="testimonial-text">La investigación que antes me tomaba semanas, ahora la completo en días. Las herramientas de IA para análisis de literatura médica son revolucionarias. Ya he publicado dos artículos desde que tomé el curso.</p>
+                <div class="testimonial-author">Dra. Ana Patricia Silva</div>
+                <div class="speciality">Oncología, Universidad Nacional</div>
+            </div>
+            <div class="testimonial">
+                <p class="testimonial-text">Como médico de familia, atiendo casos muy diversos. La IA me ayuda a no pasar por alto diagnósticos raros y a explicar mejor las condiciones a mis pacientes. Es como tener una biblioteca médica inteligente siempre disponible.</p>
+                <div class="testimonial-author">Dr. Roberto Jiménez</div>
+                <div class="speciality">Medicina Familiar, Clínica Santa Fe</div>
+            </div>
+            <div class="testimonial">
+                <p class="testimonial-text">En pediatría, cada caso es único. Las herramientas de IA me ayudan a considerar diagnósticos específicos por grupos de edad y a comunicarme mejor con los padres preocupados. Invaluable para mi especialidad.</p>
+                <div class="testimonial-author">Dra. Lucía Fernández</div>
+                <div class="speciality">Pediatría, Hospital Infantil</div>
+            </div>
+            <div class="testimonial">
+                <p class="testimonial-text">La parte práctica del curso es excepcional. Trabajar con casos reales usando IA bajo supervisión experta me dio la confianza para implementar estas herramientas en mi consultorio de manera ética y efectiva.</p>
+                <div class="testimonial-author">Dr. Miguel Ángel Torres</div>
+                <div class="speciality">Neurología, Centro Médico Especializado</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="pricing-section">
+    <div class="section">
+        <h2>Invierte en tu Futuro Profesional</h2>
+        <div class="pricing-card">
+            <h3>Curso Completo de IA para Médicos</h3>
+            <div class="original-price">Precio Regular: $497 USD</div>
+            <div class="current-price">$99.99 USD</div>
+            <div class="offer-expires">⏰ Oferta válida hasta el 15 de Agosto</div>
+            <p><strong>Incluye:</strong></p>
+            <p>✅ 4 módulos especializados<br>
+            ✅ Casos prácticos reales<br>
+            ✅ Certificado de finalización<br>
+            ✅ Acceso de por vida<br>
+            ✅ Actualizaciones gratuitas<br>
+            ✅ Comunidad exclusiva de médicos</p>
+            <a href="https://go.hotmart.com/C100877577W" class="cta-button" style="margin-top: 2rem;">¡Comprar Ahora - Solo $99.99!</a>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Add smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Add scroll animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Observe all benefit cards and testimonials
+    document.querySelectorAll('.benefit-card, .testimonial, .module-card').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'all 0.6s ease';
+        observer.observe(el);
+    });
+
+    // Add countdown timer functionality
+    const countdownDate = new Date('August 15, 2025 23:59:59').getTime();
+    
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = countdownDate - now;
+        
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        
+        const offerElement = document.querySelector('.offer-expires');
+        if (offerElement && distance > 0) {
+            offerElement.innerHTML = `⏰ Oferta termina en: ${days}d ${hours}h ${minutes}m`;
+        }
+    }
+    
+    setInterval(updateCountdown, 60000); // Update every minute
+    updateCountdown(); // Initial call
+</script>
+```
+
+</body>
+</html>
